@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
-import { Smartphone, Grid3X3, Brain } from "lucide-react";
+import AnimatedSection from "@/components/AnimatedSection";
+import { Smartphone, Grid3X3, Brain, Puzzle, Layers } from "lucide-react";
 
 const games = [
   {
@@ -9,19 +10,29 @@ const games = [
     description:
       "A visual reasoning puzzle game designed to strengthen logical thinking through structured pattern recognition challenges. Built for offline play and focused mental training.",
     icon: Grid3X3,
+    status: "Available",
   },
+];
+
+const upcomingFeatures = [
+  { icon: Puzzle, label: "More puzzle varieties" },
+  { icon: Layers, label: "Progressive difficulty" },
+  { icon: Brain, label: "Cognitive tracking" },
 ];
 
 const Games = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-hero text-hero-foreground section-padding">
-        <div className="container-narrow mx-auto text-center">
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
+      <section className="hero-gradient text-hero-foreground section-padding relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-teal-500 rounded-full blur-3xl animate-pulse-soft" />
+        </div>
+        <div className="container-narrow mx-auto text-center relative z-10">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight opacity-0 animate-fade-in">
             Our Games
           </h1>
-          <p className="mt-4 text-hero-muted text-lg max-w-2xl mx-auto">
+          <p className="mt-4 text-hero-muted text-lg max-w-2xl mx-auto opacity-0 animate-fade-in stagger-1">
             A curated collection of original mobile games focused on cognitive 
             development and thoughtful gameplay.
           </p>
@@ -32,44 +43,62 @@ const Games = () => {
       <section className="section-padding">
         <div className="container-narrow mx-auto">
           <div className="grid gap-8">
-            {games.map((game) => (
-              <article
-                key={game.name}
-                className="bg-card border border-border rounded-lg p-8 shadow-sm"
-              >
-                <div className="flex flex-col md:flex-row gap-6">
-                  <div className="w-20 h-20 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <game.icon className="h-10 w-10 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <h2 className="text-xl md:text-2xl font-bold mb-2">
-                      {game.name}
-                    </h2>
-                    <div className="flex flex-wrap gap-3 mb-4">
-                      <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
-                        <Smartphone className="h-4 w-4" />
-                        {game.platform}
-                      </span>
-                      <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
-                        <Brain className="h-4 w-4" />
-                        {game.category}
-                      </span>
+            {games.map((game, index) => (
+              <AnimatedSection key={game.name} delay={index * 100}>
+                <article className="bg-card border border-border rounded-xl p-8 shadow-sm card-hover">
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0 glow-primary">
+                      <game.icon className="h-10 w-10 text-primary" />
                     </div>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {game.description}
-                    </p>
+                    <div className="flex-1">
+                      <div className="flex flex-wrap items-center gap-3 mb-3">
+                        <h2 className="text-xl md:text-2xl font-bold">
+                          {game.name}
+                        </h2>
+                        <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
+                          {game.status}
+                        </span>
+                      </div>
+                      <div className="flex flex-wrap gap-4 mb-4">
+                        <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
+                          <Smartphone className="h-4 w-4" />
+                          {game.platform}
+                        </span>
+                        <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
+                          <Brain className="h-4 w-4" />
+                          {game.category}
+                        </span>
+                      </div>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {game.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>
+              </AnimatedSection>
             ))}
           </div>
 
           {/* Coming Soon */}
-          <div className="mt-12 text-center">
-            <p className="text-muted-foreground">
-              More games are currently in development. Check back for updates.
-            </p>
-          </div>
+          <AnimatedSection delay={200}>
+            <div className="mt-16 text-center">
+              <h3 className="text-xl font-semibold mb-6">Coming Soon</h3>
+              <div className="flex flex-wrap justify-center gap-4">
+                {upcomingFeatures.map((feature, index) => (
+                  <div
+                    key={feature.label}
+                    className="flex items-center gap-2 px-4 py-2 bg-muted rounded-full text-sm text-muted-foreground"
+                  >
+                    <feature.icon className="h-4 w-4" />
+                    {feature.label}
+                  </div>
+                ))}
+              </div>
+              <p className="mt-8 text-muted-foreground text-sm">
+                More games are currently in development. Check back for updates.
+              </p>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
     </Layout>

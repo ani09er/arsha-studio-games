@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const footerLinks = [
+    { name: "Home", path: "/" },
+    { name: "Games", path: "/games" },
+    { name: "Trust", path: "/trust" },
+    { name: "Privacy", path: "/privacy" },
+    { name: "Contact", path: "/contact" },
+  ];
+
   return (
     <footer className="bg-hero text-hero-foreground py-12">
       <div className="container-narrow mx-auto px-4 md:px-8">
@@ -15,30 +23,15 @@ const Footer = () => {
           </div>
 
           <nav className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link
-              to="/"
-              className="text-hero-muted hover:text-primary transition-colors"
-            >
-              Home
-            </Link>
-            <Link
-              to="/games"
-              className="text-hero-muted hover:text-primary transition-colors"
-            >
-              Games
-            </Link>
-            <Link
-              to="/privacy"
-              className="text-hero-muted hover:text-primary transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              to="/contact"
-              className="text-hero-muted hover:text-primary transition-colors"
-            >
-              Contact
-            </Link>
+            {footerLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className="text-hero-muted hover:text-primary transition-colors duration-200"
+              >
+                {link.name}
+              </Link>
+            ))}
           </nav>
         </div>
 
