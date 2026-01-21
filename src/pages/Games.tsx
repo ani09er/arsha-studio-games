@@ -1,8 +1,18 @@
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
-import { Smartphone, Grid3X3, Brain, Puzzle, Layers } from "lucide-react";
+import { Smartphone, Grid3X3, Brain, Puzzle, Layers, Calculator, Shapes, CircuitBoard, Target, Lightbulb, Sparkles } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
-const games = [
+interface Game {
+  name: string;
+  platform: string;
+  category: string;
+  description: string;
+  icon: LucideIcon;
+  status: "Available" | "Coming Soon";
+}
+
+const games: Game[] = [
   {
     name: "Pattern IQ Trainer",
     platform: "Android",
@@ -12,12 +22,58 @@ const games = [
     icon: Grid3X3,
     status: "Available",
   },
+  {
+    name: "Number Nexus",
+    platform: "Android",
+    category: "Educational / Math / Logic",
+    description:
+      "Master numerical reasoning through progressively challenging arithmetic puzzles. Develop mental math skills and number sense with carefully designed exercises that adapt to your pace.",
+    icon: Calculator,
+    status: "Available",
+  },
+  {
+    name: "Shape Logic",
+    platform: "Android",
+    category: "Puzzle / Spatial Reasoning",
+    description:
+      "Explore spatial intelligence through geometric puzzles that challenge your ability to mentally rotate, combine, and transform shapes. Perfect for developing visual-spatial skills.",
+    icon: Shapes,
+    status: "Available",
+  },
+  {
+    name: "Circuit Mind",
+    platform: "Android",
+    category: "Logic / Strategy / Puzzle",
+    description:
+      "Build logical pathways and solve circuit-based puzzles that train systematic thinking. Each level introduces new components that require careful analysis and strategic planning.",
+    icon: CircuitBoard,
+    status: "Coming Soon",
+  },
+  {
+    name: "Focus Flow",
+    platform: "Android",
+    category: "Attention / Cognitive Training",
+    description:
+      "Enhance concentration and attention span through targeted exercises designed by cognitive science principles. Track your focus improvements over time with built-in progress metrics.",
+    icon: Target,
+    status: "Coming Soon",
+  },
+  {
+    name: "Memory Matrix",
+    platform: "Android",
+    category: "Memory / Cognitive / Educational",
+    description:
+      "Strengthen working memory and recall abilities through engaging pattern-based memory challenges. Progressive difficulty ensures continuous cognitive growth at your own pace.",
+    icon: Lightbulb,
+    status: "Coming Soon",
+  },
 ];
 
 const upcomingFeatures = [
   { icon: Puzzle, label: "More puzzle varieties" },
   { icon: Layers, label: "Progressive difficulty" },
   { icon: Brain, label: "Cognitive tracking" },
+  { icon: Sparkles, label: "Achievement system" },
 ];
 
 const Games = () => {
