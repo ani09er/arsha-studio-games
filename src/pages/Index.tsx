@@ -3,6 +3,7 @@ import { ArrowRight, Sparkles, Brain, Shield, Gamepad2, WifiOff } from "lucide-r
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
+import HeroBackground from "@/components/HeroBackground";
 import SEO from "@/components/SEO";
 
 const philosophyCards = [
@@ -50,12 +51,8 @@ const Index = () => {
         description="ARSHA STUDIO develops original mobile games focused on logic, visual reasoning, and cognitive engagement. Offline-first, privacy-respecting educational games for Android."
       />
       {/* Hero Section */}
-      <section className="hero-gradient text-hero-foreground section-padding relative overflow-hidden">
-        {/* Subtle background decoration */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl animate-pulse-soft" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-teal-500 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "1.5s" }} />
-        </div>
+      <section className="bg-hero text-hero-foreground section-padding relative overflow-hidden min-h-[70vh] flex items-center">
+        <HeroBackground />
 
         <div className="container-narrow mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight opacity-0 animate-fade-in">
