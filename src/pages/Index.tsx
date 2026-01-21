@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles, Brain, Shield, Lightbulb, Gamepad2, WifiOff } from "lucide-react";
+import { ArrowRight, Sparkles, Brain, Shield, Gamepad2, WifiOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 
 const philosophyCards = [
   {
@@ -43,6 +44,11 @@ const valueCards = [
 const Index = () => {
   return (
     <Layout>
+      <SEO 
+        canonical="/"
+        title="ARSHA STUDIO – Independent Game Studio | Cognitive Mobile Games"
+        description="ARSHA STUDIO develops original mobile games focused on logic, visual reasoning, and cognitive engagement. Offline-first, privacy-respecting educational games for Android."
+      />
       {/* Hero Section */}
       <section className="hero-gradient text-hero-foreground section-padding relative overflow-hidden">
         {/* Subtle background decoration */}

@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 import { WifiOff, ShieldCheck, Eye, FileCheck, CheckCircle, Lock } from "lucide-react";
 
 const trustPoints = [
@@ -37,6 +38,11 @@ const complianceChecks = [
 const Trust = () => {
   return (
     <Layout>
+      <SEO 
+        canonical="/trust"
+        title="Built for Trust"
+        description="Learn about ARSHA STUDIO's commitment to privacy, transparency, and Google Play policy compliance. No data collection, offline-first games."
+      />
       {/* Hero */}
       <section className="hero-gradient text-hero-foreground section-padding relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">

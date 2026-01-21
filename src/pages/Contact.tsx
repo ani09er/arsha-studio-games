@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -28,6 +29,11 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO 
+        canonical="/contact"
+        title="Contact Us"
+        description="Get in touch with ARSHA STUDIO. Reach out for support, feedback, or inquiries about our mobile games."
+      />
       {/* Hero */}
       <section className="hero-gradient text-hero-foreground section-padding relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
