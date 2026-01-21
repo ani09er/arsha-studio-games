@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
-import { Target, Heart, Lightbulb, Users, Zap, CheckCircle } from "lucide-react";
+import SEO from "@/components/SEO";
+import { Target, Heart, Lightbulb, Users, CheckCircle } from "lucide-react";
 
 const principles = [
   {
@@ -37,6 +38,11 @@ const commitments = [
 const About = () => {
   return (
     <Layout>
+      <SEO 
+        canonical="/about"
+        title="About Us"
+        description="ARSHA STUDIO is an independent game production company based in India, specializing in original, educational, and logic-based mobile games."
+      />
       {/* Hero */}
       <section className="hero-gradient text-hero-foreground section-padding relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">

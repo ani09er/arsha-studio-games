@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 import { FileText } from "lucide-react";
 
 const sections = [
@@ -46,6 +47,11 @@ const sections = [
 const Privacy = () => {
   return (
     <Layout>
+      <SEO 
+        canonical="/privacy"
+        title="Privacy Policy"
+        description="ARSHA STUDIO's privacy policy. We collect no personal data, use no tracking, and all games work offline. Your privacy is protected by design."
+      />
       {/* Hero */}
       <section className="hero-gradient text-hero-foreground section-padding relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">

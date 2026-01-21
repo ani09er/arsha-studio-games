@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 import { Smartphone, Grid3X3, Brain, Puzzle, Layers, Calculator, Shapes, CircuitBoard, Target, Lightbulb, Sparkles } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -79,6 +80,11 @@ const upcomingFeatures = [
 const Games = () => {
   return (
     <Layout>
+      <SEO 
+        canonical="/games"
+        title="Our Games"
+        description="Explore ARSHA STUDIO's collection of original mobile games focused on cognitive development, pattern recognition, and logical thinking for Android."
+      />
       {/* Hero */}
       <section className="hero-gradient text-hero-foreground section-padding relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
