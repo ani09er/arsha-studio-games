@@ -4,210 +4,671 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <title>Privacy Policy | ARSHA STUDIO</title>
-  <meta name="description" content="Privacy Policy for Puzzle Mind by ARSHA STUDIO. No data collection, 100% offline, COPPA and GDPR compliant.">
+  <title>Privacy Policy – Puzzle Mind | ARSHA STUDIO</title>
+  <meta name="description" content="Privacy Policy for Puzzle Mind. We collect no personal data, operate 100% offline, with no ads, no tracking, and no third-party services. Your privacy is protected by design.">
   <link rel="canonical" href="https://arshastudio.com/privacy.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; line-height: 1.6; color: #1a1a2e; background: #ffffff; padding: 2rem; max-width: 800px; margin: 0 auto; }
-    h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #0f0f23; }
-    h2 { font-size: 1.5rem; margin: 2rem 0 1rem; color: #0f0f23; border-bottom: 2px solid #14b8a6; padding-bottom: 0.5rem; }
-    h3 { font-size: 1.25rem; margin: 1.5rem 0 0.75rem; color: #1a1a2e; }
-    p { margin-bottom: 1rem; }
-    ul { margin: 1rem 0 1rem 2rem; }
-    li { margin-bottom: 0.5rem; }
-    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-    th, td { border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; }
-    th { background: #f3f4f6; font-weight: 600; }
-    .summary { background: #f0fdfa; border: 2px solid #14b8a6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
-    .summary p { margin-bottom: 0; font-weight: 500; }
-    .effective-date { color: #6b7280; font-size: 0.875rem; margin-bottom: 2rem; }
-    a { color: #14b8a6; }
+    :root {
+      --background: hsl(222, 47%, 11%);
+      --foreground: hsl(210, 40%, 98%);
+      --card: hsl(222, 47%, 14%);
+      --card-foreground: hsl(210, 40%, 98%);
+      --primary: hsl(166, 72%, 40%);
+      --primary-foreground: hsl(222, 47%, 11%);
+      --muted-foreground: hsl(215, 20%, 65%);
+      --border: hsl(217, 33%, 17%);
+      --destructive: hsl(0, 84%, 60%);
+      --hero-bg: hsl(222, 47%, 11%);
+      --hero-muted: hsl(215, 20%, 65%);
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; border-color: var(--border); }
+    
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: var(--foreground);
+      background: var(--background);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--hero-bg) 0%, hsl(222, 47%, 15%) 50%, var(--hero-bg) 100%);
+      color: var(--foreground);
+      padding: 4rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      bottom: 25%;
+      left: 25%;
+      width: 16rem;
+      height: 16rem;
+      background: hsl(166, 72%, 40%);
+      border-radius: 50%;
+      filter: blur(48px);
+      opacity: 0.05;
+    }
+    
+    .hero-icon {
+      width: 3rem;
+      height: 3rem;
+      margin: 0 auto 1.5rem;
+      color: var(--primary);
+    }
+    
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    @media (min-width: 768px) {
+      .hero { padding: 6rem 2rem; }
+      .hero h1 { font-size: 3rem; }
+    }
+    
+    .hero-subtitle {
+      color: var(--hero-muted);
+      font-size: 1.125rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Summary Banner */
+    .summary-banner {
+      background: hsla(166, 72%, 40%, 0.05);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 2rem 1rem;
+    }
+    
+    .summary-banner p {
+      max-width: 56rem;
+      margin: 0 auto;
+      text-align: center;
+      font-weight: 500;
+      line-height: 1.75;
+    }
+    
+    .summary-banner .highlight {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* Main Content */
+    main {
+      padding: 4rem 1rem;
+      max-width: 56rem;
+      margin: 0 auto;
+    }
+    
+    @media (min-width: 768px) {
+      main { padding: 6rem 2rem; }
+    }
+
+    /* Policy Card */
+    .policy-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .policy-card { padding: 2rem; }
+    }
+    
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .card-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      min-width: 2.5rem;
+      background: hsla(166, 72%, 40%, 0.1);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+    }
+    
+    .card-icon svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+    
+    .card-content {
+      flex: 1;
+      min-width: 0;
+    }
+    
+    .card-content h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--foreground);
+    }
+    
+    .card-content h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.75rem;
+      color: var(--foreground);
+    }
+    
+    .card-content h3:first-of-type {
+      margin-top: 0;
+    }
+    
+    .card-content p {
+      color: var(--muted-foreground);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    
+    .card-content strong {
+      color: var(--foreground);
+    }
+
+    /* Check Lists */
+    .check-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      margin-bottom: 0.5rem;
+    }
+    
+    .check-list .icon-negative {
+      color: var(--destructive);
+      flex-shrink: 0;
+      margin-top: 0.125rem;
+    }
+    
+    .check-list .icon-positive {
+      color: var(--primary);
+      flex-shrink: 0;
+      margin-top: 0.125rem;
+    }
+    
+    .bullet-list li::before {
+      content: '•';
+      color: var(--primary);
+      margin-right: 0.5rem;
+    }
+
+    /* Tables */
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+    
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.75rem;
+      text-align: left;
+    }
+    
+    th {
+      background: hsla(166, 72%, 40%, 0.05);
+      font-weight: 600;
+      color: var(--foreground);
+    }
+    
+    td {
+      color: var(--muted-foreground);
+    }
+    
+    td.highlight {
+      color: var(--primary);
+    }
+    
+    td.bold {
+      font-weight: 500;
+      color: var(--foreground);
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    
+    .contact-section h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-section p {
+      color: var(--muted-foreground);
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-section a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .contact-section a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1rem;
+      text-align: center;
+      color: var(--muted-foreground);
+      font-size: 0.875rem;
+    }
   </style>
 </head>
 <body>
-  <header>
+  <!-- Hero Section -->
+  <header class="hero">
+    <svg class="hero-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+    </svg>
     <h1>Privacy Policy</h1>
-    <p class="effective-date">Effective Date: January 2025 | Last Updated: January 2025</p>
+    <p class="hero-subtitle">Puzzle Mind – Last updated: January 2026</p>
   </header>
 
+  <!-- Summary Banner -->
+  <section class="summary-banner">
+    <p><span class="highlight">Puzzle Mind</span> does not collect, store, transmit, or share any personal or non-personal user data including advertising IDs, analytics, or sensor information. The app functions fully offline and all game progress and settings are stored locally on the user's device. Puzzle Mind does not contain advertisements, does not use third-party SDKs for tracking, and does not use health or fitness data. This app is suitable for all ages and complies with applicable privacy laws, including COPPA and GDPR.</p>
+  </section>
+
   <main>
-    <div class="summary">
-      <p><strong>Puzzle Mind</strong> does not collect, store, transmit, or share any personal or non-personal user data including advertising IDs, analytics, or sensor information. The app functions fully offline and all game progress and settings are stored locally on the user's device. Puzzle Mind does not contain advertisements, does not use third-party SDKs for tracking, and does not use health or fitness data. This app is suitable for all ages and complies with applicable privacy laws, including COPPA and GDPR.</p>
+    <!-- Information We Collect -->
+    <article class="policy-card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4m16 0l-4-4m4 4l-4 4M4 12l4-4m-4 4l4 4" />
+          </svg>
+        </div>
+        <div class="card-content">
+          <h2>Information We Collect</h2>
+          <h3>We Do NOT Collect Any Data</h3>
+          <p>Puzzle Mind is designed with privacy as a core principle. We do not collect:</p>
+          <ul class="check-list">
+            <li><span class="icon-negative">✗</span> Personal information (name, email, phone number, address)</li>
+            <li><span class="icon-negative">✗</span> Device identifiers or unique IDs</li>
+            <li><span class="icon-negative">✗</span> Location data</li>
+            <li><span class="icon-negative">✗</span> Usage analytics or behavioral data</li>
+            <li><span class="icon-negative">✗</span> Crash reports or diagnostic data</li>
+            <li><span class="icon-negative">✗</span> Advertising identifiers</li>
+            <li><span class="icon-negative">✗</span> Financial or payment information</li>
+            <li><span class="icon-negative">✗</span> Photos, media, or files from your device</li>
+            <li><span class="icon-negative">✗</span> Contacts or calendar information</li>
+            <li><span class="icon-negative">✗</span> Health or fitness data</li>
+            <li><span class="icon-negative">✗</span> Any other personal or sensitive data</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- Local Data Storage -->
+    <article class="policy-card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+          </svg>
+        </div>
+        <div class="card-content">
+          <h2>Local Data Storage</h2>
+          <h3>How the App Works</h3>
+          <p>Puzzle Mind stores game progress and settings <strong>locally on your device only</strong>. This data:</p>
+          <ul class="check-list">
+            <li><span class="icon-positive">✓</span> Remains entirely on your device</li>
+            <li><span class="icon-positive">✓</span> Is never transmitted to any server</li>
+            <li><span class="icon-positive">✓</span> Is never shared with us or any third party</li>
+            <li><span class="icon-positive">✓</span> Is under your complete control</li>
+            <li><span class="icon-positive">✓</span> Can be deleted by uninstalling the app or clearing app data</li>
+          </ul>
+          
+          <h3>Types of Local Data</h3>
+          <p>The following data is stored locally on your device for app functionality:</p>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Data Type</th>
+                  <th>Purpose</th>
+                  <th>Storage Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="bold">Game Progress</td>
+                  <td>Track completed puzzles and unlocked levels</td>
+                  <td class="highlight">Device only</td>
+                </tr>
+                <tr>
+                  <td class="bold">Player Statistics</td>
+                  <td>Display your cognitive scores and performance</td>
+                  <td class="highlight">Device only</td>
+                </tr>
+                <tr>
+                  <td class="bold">Session History</td>
+                  <td>Show your recent game sessions</td>
+                  <td class="highlight">Device only</td>
+                </tr>
+                <tr>
+                  <td class="bold">App Settings</td>
+                  <td>Remember your preferences</td>
+                  <td class="highlight">Device only</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>This local data is stored using industry-standard secure storage mechanisms provided by your device's operating system.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Third-Party Services -->
+    <article class="policy-card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+          </svg>
+        </div>
+        <div class="card-content">
+          <h2>Third-Party Services</h2>
+          <h3>No Third-Party Services</h3>
+          <p>Puzzle Mind does <strong>NOT</strong> integrate with any third-party services:</p>
+          <ul class="check-list">
+            <li><span class="icon-negative">✗</span> No analytics services (Google Analytics, Firebase, etc.)</li>
+            <li><span class="icon-negative">✗</span> No advertising networks or ad SDKs</li>
+            <li><span class="icon-negative">✗</span> No social media integrations</li>
+            <li><span class="icon-negative">✗</span> No cloud storage services</li>
+            <li><span class="icon-negative">✗</span> No crash reporting services</li>
+            <li><span class="icon-negative">✗</span> No user authentication services</li>
+            <li><span class="icon-negative">✗</span> No in-app purchase services</li>
+            <li><span class="icon-negative">✗</span> No push notification services</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- Internet & Network Access -->
+    <article class="policy-card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+          </svg>
+        </div>
+        <div class="card-content">
+          <h2>Internet & Network Access</h2>
+          <h3>Offline Operation</h3>
+          <p>Puzzle Mind operates <strong>100% offline</strong>:</p>
+          <ul class="check-list">
+            <li><span class="icon-positive">✓</span> The App does not require an internet connection</li>
+            <li><span class="icon-positive">✓</span> The App does not make any network requests</li>
+            <li><span class="icon-positive">✓</span> The App does not communicate with any servers</li>
+            <li><span class="icon-positive">✓</span> All features work without connectivity</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- Advertising -->
+    <article class="policy-card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+          </svg>
+        </div>
+        <div class="card-content">
+          <h2>Advertising</h2>
+          <h3>No Advertisements</h3>
+          <p>Puzzle Mind is <strong>completely ad-free</strong>:</p>
+          <ul class="check-list">
+            <li><span class="icon-negative">✗</span> No banner ads</li>
+            <li><span class="icon-negative">✗</span> No interstitial ads</li>
+            <li><span class="icon-negative">✗</span> No video ads</li>
+            <li><span class="icon-negative">✗</span> No rewarded ads</li>
+            <li><span class="icon-negative">✗</span> No native ads</li>
+            <li><span class="icon-negative">✗</span> No advertising SDKs or tracking</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- Children's Privacy -->
+    <article class="policy-card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </div>
+        <div class="card-content">
+          <h2>Children's Privacy</h2>
+          <h3>Safe for All Ages</h3>
+          <p>Since Puzzle Mind does not collect any personal information from any user, the App is safe for users of all ages, including children under 13 years of age. We comply with:</p>
+          <ul class="check-list">
+            <li><span class="icon-positive">•</span> Children's Online Privacy Protection Act (COPPA)</li>
+            <li><span class="icon-positive">•</span> General Data Protection Regulation (GDPR) provisions for children</li>
+            <li><span class="icon-positive">•</span> Other applicable children's privacy laws worldwide</li>
+          </ul>
+          <p>Parents and guardians can feel confident that their children's privacy is protected when using Puzzle Mind.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Data Security -->
+    <article class="policy-card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+        </div>
+        <div class="card-content">
+          <h2>Data Security</h2>
+          <h3>Your Data is Secure</h3>
+          <p>Although we do not collect or transmit any data, the local data stored on your device is protected by:</p>
+          <ul class="check-list">
+            <li><span class="icon-positive">•</span> Your device's built-in security features</li>
+            <li><span class="icon-positive">•</span> Operating system-level data isolation</li>
+            <li><span class="icon-positive">•</span> App sandboxing provided by Android</li>
+          </ul>
+          
+          <h3>Your Control</h3>
+          <p>You have complete control over your local data:</p>
+          <ul class="check-list">
+            <li><span class="icon-positive">•</span> <strong>View:</strong> Your game progress is visible within the app</li>
+            <li><span class="icon-positive">•</span> <strong>Delete:</strong> Uninstall the app or clear app data to remove all local data</li>
+            <li><span class="icon-positive">•</span> <strong>Export:</strong> Local data remains on your device only</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- Data Retention -->
+    <article class="policy-card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <div class="card-content">
+          <h2>Data Retention</h2>
+          <h3>No Server-Side Retention</h3>
+          <p>Since we do not collect any data, there is no server-side data retention.</p>
+          
+          <h3>Local Data Retention</h3>
+          <p>Local data on your device persists until:</p>
+          <ul class="check-list">
+            <li><span class="icon-positive">•</span> You uninstall the application</li>
+            <li><span class="icon-positive">•</span> You clear the app's data through device settings</li>
+            <li><span class="icon-positive">•</span> You reset your device</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- Your Rights -->
+    <article class="policy-card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+          </svg>
+        </div>
+        <div class="card-content">
+          <h2>Your Rights</h2>
+          <h3>Under GDPR (European Users)</h3>
+          <p>Even though we do not collect personal data, we acknowledge your rights under GDPR:</p>
+          <ul class="check-list">
+            <li><span class="icon-positive">•</span> Right to access</li>
+            <li><span class="icon-positive">•</span> Right to rectification</li>
+            <li><span class="icon-positive">•</span> Right to erasure</li>
+            <li><span class="icon-positive">•</span> Right to data portability</li>
+            <li><span class="icon-positive">•</span> Right to object</li>
+          </ul>
+          <p>Since no personal data is collected, these rights are automatically fulfilled.</p>
+          
+          <h3>Under CCPA (California Users)</h3>
+          <p>Under the California Consumer Privacy Act:</p>
+          <ul class="check-list">
+            <li><span class="icon-positive">•</span> We do not sell personal information</li>
+            <li><span class="icon-positive">•</span> We do not share personal information for targeted advertising</li>
+            <li><span class="icon-positive">•</span> We do not collect personal information</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- Google Play Data Safety -->
+    <article class="policy-card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <div class="card-content">
+          <h2>Google Play Data Safety Declaration</h2>
+          <p>In accordance with Google Play Store requirements, we declare:</p>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Question</th>
+                  <th>Answer</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Does your app collect or share any user data?</td>
+                  <td class="bold">No</td>
+                </tr>
+                <tr>
+                  <td>Does your app collect user location?</td>
+                  <td class="bold">No</td>
+                </tr>
+                <tr>
+                  <td>Does your app collect personal info?</td>
+                  <td class="bold">No</td>
+                </tr>
+                <tr>
+                  <td>Does your app collect financial info?</td>
+                  <td class="bold">No</td>
+                </tr>
+                <tr>
+                  <td>Does your app collect health and fitness info?</td>
+                  <td class="bold">No</td>
+                </tr>
+                <tr>
+                  <td>Does your app collect device or other IDs?</td>
+                  <td class="bold">No</td>
+                </tr>
+                <tr>
+                  <td>Is data encrypted in transit?</td>
+                  <td class="bold">N/A - No data transmitted</td>
+                </tr>
+                <tr>
+                  <td>Can users request data deletion?</td>
+                  <td class="bold">Yes - Uninstall app</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Policy Changes -->
+    <article class="policy-card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+        </div>
+        <div class="card-content">
+          <h2>Changes to This Privacy Policy</h2>
+          <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last Updated" date at the top of this policy. We encourage you to review this Privacy Policy periodically.</p>
+          <p>If we make material changes that affect user privacy, we will provide notice through the App or by other means.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+      <h2>Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, please contact us:</p>
+      <p><strong>Developer:</strong> ARSHA STUDIO</p>
+      <p><strong>Email:</strong> <a href="mailto:contact@arshastudio.com">contact@arshastudio.com</a></p>
+      <p><strong>Website:</strong> <a href="https://arshastudio.com">https://arshastudio.com</a></p>
     </div>
-
-    <h2>1. Introduction</h2>
-    <p>This Privacy Policy describes how ARSHA STUDIO ("we", "us", or "our") handles information in connection with our mobile application <strong>Puzzle Mind</strong> ("the App"). We are committed to protecting user privacy and maintaining transparency about our data practices.</p>
-
-    <h2>2. Google Play Data Safety Declaration</h2>
-    <p>In accordance with Google Play Store requirements, we declare the following:</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Data Type</th>
-          <th>Collected</th>
-          <th>Shared</th>
-          <th>Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Personal Information</td>
-          <td>No</td>
-          <td>No</td>
-          <td>N/A</td>
-        </tr>
-        <tr>
-          <td>Financial Information</td>
-          <td>No</td>
-          <td>No</td>
-          <td>N/A</td>
-        </tr>
-        <tr>
-          <td>Location Data</td>
-          <td>No</td>
-          <td>No</td>
-          <td>N/A</td>
-        </tr>
-        <tr>
-          <td>Device Identifiers</td>
-          <td>No</td>
-          <td>No</td>
-          <td>N/A</td>
-        </tr>
-        <tr>
-          <td>Usage Analytics</td>
-          <td>No</td>
-          <td>No</td>
-          <td>N/A</td>
-        </tr>
-        <tr>
-          <td>Advertising IDs</td>
-          <td>No</td>
-          <td>No</td>
-          <td>N/A</td>
-        </tr>
-        <tr>
-          <td>Health & Fitness Data</td>
-          <td>No</td>
-          <td>No</td>
-          <td>N/A</td>
-        </tr>
-        <tr>
-          <td>Sensor Data</td>
-          <td>No</td>
-          <td>No</td>
-          <td>N/A</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h2>3. Data Collection Statement</h2>
-    <p><strong>We do not collect any data.</strong> Puzzle Mind is designed to operate entirely offline without any data collection mechanisms.</p>
-    <ul>
-      <li>No personal information is collected</li>
-      <li>No usage analytics or tracking</li>
-      <li>No advertising identifiers</li>
-      <li>No device information transmitted</li>
-      <li>No third-party SDKs or services</li>
-      <li>No server communication</li>
-    </ul>
-
-    <h2>4. Local Data Storage</h2>
-    <p>The App stores the following data locally on your device only:</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Data</th>
-          <th>Purpose</th>
-          <th>Storage Location</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Game Progress</td>
-          <td>Save puzzle completion status</td>
-          <td>Device only (SharedPreferences)</td>
-        </tr>
-        <tr>
-          <td>Settings</td>
-          <td>Store user preferences</td>
-          <td>Device only (SharedPreferences)</td>
-        </tr>
-        <tr>
-          <td>High Scores</td>
-          <td>Track personal achievements</td>
-          <td>Device only (SharedPreferences)</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>This data never leaves your device and is not accessible to us or any third parties.</p>
-
-    <h2>5. Offline Operation</h2>
-    <p>Puzzle Mind operates 100% offline:</p>
-    <ul>
-      <li>No internet connection required to play</li>
-      <li>No data is transmitted to external servers</li>
-      <li>No background network activity</li>
-      <li>No cloud synchronization</li>
-    </ul>
-
-    <h2>6. Third-Party Services</h2>
-    <p><strong>We do not use any third-party services</strong> including:</p>
-    <ul>
-      <li>No advertising networks</li>
-      <li>No analytics platforms (Google Analytics, Firebase, etc.)</li>
-      <li>No social media integrations</li>
-      <li>No crash reporting services</li>
-      <li>No attribution or tracking SDKs</li>
-    </ul>
-
-    <h2>7. Children's Privacy (COPPA Compliance)</h2>
-    <p>Puzzle Mind is safe for users of all ages. Because we do not collect any personal information from any user, we are fully compliant with the Children's Online Privacy Protection Act (COPPA).</p>
-    <ul>
-      <li>No data is collected from children or adults</li>
-      <li>No account creation required</li>
-      <li>No social features or user-generated content</li>
-      <li>No in-app purchases</li>
-      <li>No advertisements</li>
-    </ul>
-
-    <h2>8. GDPR Compliance</h2>
-    <p>For users in the European Economic Area (EEA), we confirm:</p>
-    <ul>
-      <li>No personal data is processed</li>
-      <li>No consent is required as no data is collected</li>
-      <li>No data transfers occur</li>
-      <li>Your rights under GDPR are fully respected</li>
-    </ul>
-
-    <h2>9. CCPA Compliance</h2>
-    <p>For California residents, we confirm:</p>
-    <ul>
-      <li>We do not sell personal information</li>
-      <li>We do not collect personal information</li>
-      <li>No categories of personal information are disclosed to third parties</li>
-    </ul>
-
-    <h2>10. Data Security</h2>
-    <p>Since no data is collected or transmitted, there is no risk of data breaches affecting your personal information through our App.</p>
-
-    <h2>11. Changes to This Policy</h2>
-    <p>If we make changes to this Privacy Policy, we will update the "Last Updated" date at the top of this page. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
-
-    <h2>12. Contact Information</h2>
-    <p>If you have questions about this Privacy Policy, please contact us:</p>
-    <ul>
-      <li><strong>Developer:</strong> ARSHA STUDIO</li>
-      <li><strong>Email:</strong> <a href="mailto:contact@arshastudio.com">contact@arshastudio.com</a></li>
-      <li><strong>Website:</strong> <a href="https://arshastudio.com">https://arshastudio.com</a></li>
-    </ul>
-
-    <h2>13. Summary</h2>
-    <p>Puzzle Mind is a privacy-respecting, offline puzzle game. We do not collect, store, share, or transmit any user data. All game data remains on your device and is fully under your control.</p>
   </main>
 
-  <footer style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 0.875rem;">
+  <footer>
     <p>&copy; 2025 ARSHA STUDIO. All rights reserved.</p>
   </footer>
 </body>
