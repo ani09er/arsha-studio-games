@@ -152,13 +152,14 @@ const Privacy = () => {
       </section>
 
       {/* Summary Banner */}
-      <section className="bg-primary/5 border-y border-border py-6">
+      <section className="bg-primary/5 border-y border-border py-8">
         <div className="container-narrow mx-auto">
           <AnimatedSection>
-            <p className="text-center text-lg font-medium">
-              <span className="text-primary">Puzzle Mind</span> does not collect, store, transmit, or share any personal data. 
-              The App operates entirely offline with no server communication, no analytics, no advertising, and no third-party services.
-            </p>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-center text-base md:text-lg font-medium leading-relaxed">
+                <span className="text-primary font-bold">Puzzle Mind</span> does not collect, store, transmit, or share any personal or non-personal user data including advertising IDs, analytics, or sensor information. The app functions fully offline and all game progress and settings are stored locally on the user's device. Puzzle Mind does not contain advertisements, does not use third-party SDKs for tracking, and does not use health or fitness data. This app is suitable for all ages and complies with applicable privacy laws, including COPPA and GDPR.
+              </p>
+            </div>
           </AnimatedSection>
         </div>
       </section>
